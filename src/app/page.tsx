@@ -186,10 +186,10 @@ export default function HomePage() {
 			<header className='flex items-center justify-between mb-8'>
 				<div>
 					<h1 className='text-4xl font-black italic tracking-tighter text-orange-600'>
-						BLOCOS DA VILA 🎊
+						Churras, drinks e aditivos! 🎊
 					</h1>
 					<p className='text-gray-500 font-bold text-xs uppercase tracking-widest'>
-						Carnaval 2026 • São Paulo
+						Carnavral 2026 • São Paulo •Brasil
 					</p>
 				</div>
 
@@ -208,7 +208,7 @@ export default function HomePage() {
 						<div className='relative z-10'>
 							<div className='flex items-center gap-2 mb-1'>
 								<span className='bg-white/20 px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-tighter'>
-									Líder da Vila 👑
+									Líder folião 👑
 								</span>
 							</div>
 							<h3 className='text-2xl font-black'>{topUser.name}</h3>

@@ -36,10 +36,10 @@ export default function RankingPage() {
 					← Voltar para os Blocos
 				</Link>
 				<h1 className='text-4xl font-black italic tracking-tighter mt-4'>
-					REIS DA VILA 👑
+					REIS DA FOLIA 👑
 				</h1>
 				<p className='text-orange-100 font-medium'>
-					Os maiores foliões do bairro
+					Os maiores foliões do grupo
 				</p>
 			</div>
 

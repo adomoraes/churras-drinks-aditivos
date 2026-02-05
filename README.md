@@ -22,7 +22,7 @@ Aplicação para acompanhar os blocos de carnaval de São Paulo em 2026 com os a
 ### 1. Clonar o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/churras-drinks-aditivos.git
+git clone https://github.com/adomoraes/churras-drinks-aditivos.git
 cd churras-drinks-aditivos
 ```
 
@@ -60,3 +60,25 @@ Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver a 
 - `npm run build`: Compila a aplicação para produção.
 - `npm run start`: Inicia o servidor de produção.
 - `npm run lint`: Executa o linter (ESLint).
+
+## Estrutura do Projeto
+
+A estrutura de pastas principal está organizada da seguinte forma:
+
+```
+/
+├── public/              # Ficheiros estáticos (imagens, svgs, etc.)
+├── src/
+│   ├── app/             # Rotas e páginas da aplicação (Next.js App Router)
+│   │   ├── actions/     # Funções de servidor (Server Actions)
+│   │   ├── components/  # Componentes React reutilizáveis
+│   │   └── lib/         # Módulos e bibliotecas (ex: cliente Supabase)
+│   └── utils/           # Funções utilitárias
+├── .env.local           # Ficheiro para variáveis de ambiente (não versionado)
+├── next.config.ts       # Ficheiro de configuração do Next.js
+└── package.json         # Dependências e scripts do projeto
+```
+
+## Licença
+
+Distribuído sob a licença MIT. Veja `LICENSE.txt` para mais informações.

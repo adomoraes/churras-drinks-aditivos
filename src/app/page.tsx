@@ -11,6 +11,16 @@ import { getTopFoliao, RankingUser } from "@/app/actions/ranking"
 import { Countdown } from "@/components/BlockAction"
 import { getDistanceInMeters } from "@/utils/geo"
 import Link from "next/link"
+import dynamic from "next/dynamic"
+
+const FoliaMap = dynamic(() => import("@/components/FoliaMap"), {
+	ssr: false,
+	loading: () => (
+		<div className='h-400 bg-gray-100 animate-pulse rounded-3xl flex items-center justify-center font-bold text-gray-400'>
+			CARREGANDO MAPA...
+		</div>
+	),
+})
 
 // Interfaces para tipagem
 interface CheckInInfo {
@@ -172,14 +182,14 @@ export default function HomePage() {
 		)
 
 	return (
-		<main className='min-h-screen bg-gray-50 pb-10'>
+		<main className='min-h-screen bg-amber-50 p-4 pb-20'>
 			<header className='flex items-center justify-between mb-8'>
 				<div>
 					<h1 className='text-4xl font-black italic tracking-tighter text-orange-600'>
-						BLOCOS DA VILA 🎊
+						Churras, drinks e aditivos! 🎊
 					</h1>
 					<p className='text-gray-500 font-bold text-xs uppercase tracking-widest'>
-						Carnaval 2026 • São Paulo
+						Carnavral 2026 • São Paulo •Brasil
 					</p>
 				</div>
 
@@ -198,7 +208,7 @@ export default function HomePage() {
 						<div className='relative z-10'>
 							<div className='flex items-center gap-2 mb-1'>
 								<span className='bg-white/20 px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-tighter'>
-									Líder da Vila 👑
+									Líder folião 👑
 								</span>
 							</div>
 							<h3 className='text-2xl font-black'>{topUser.name}</h3>
@@ -216,6 +226,21 @@ export default function HomePage() {
 					</div>
 				</Link>
 			)}
+
+			<section className='mb-8'>
+				<div className='flex items-center justify-between mb-4 px-2'>
+					<h2 className='text-xl font-black text-gray-800 italic'>
+						MAPA DA FOLIA 📍
+					</h2>
+					<span className='text-[10px] font-bold text-orange-500 uppercase'>
+						São Paulo, SP
+					</span>
+				</div>
+
+				{/* O MAPA DINÂMICO */}
+				<FoliaMap blocks={blocks} />
+			</section>
+
 			<div className='p-4 space-y-6'>
 				{blocks.map((block) => {
 					const status = hasMounted

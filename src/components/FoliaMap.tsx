@@ -22,10 +22,10 @@ export default function FoliaMap({ blocks }: { blocks: any[] }) {
 	const center = { lat: -23.5505, lng: -46.6333 } // Centro de SP (conforme sua massa de dados)
 
 	return (
-		<div className='h-400 w-full rounded-3xl overflow-hidden shadow-inner border-4 border-white'>
+		<div className='h-[400px] w-full rounded-3xl overflow-hidden shadow-inner border-4 border-white'>
 			<MapContainer
 				center={center}
-				zoom={12}
+				zoom={13}
 				scrollWheelZoom={false}
 				className='h-full w-full'>
 				<TileLayer

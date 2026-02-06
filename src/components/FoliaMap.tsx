@@ -25,7 +25,7 @@ export default function FoliaMap({ blocks }: { blocks: any[] }) {
 		<div className='h-[400px] w-full rounded-3xl overflow-hidden shadow-inner border-4 border-white'>
 			<MapContainer
 				center={center}
-				zoom={13}
+				zoom={15}
 				scrollWheelZoom={false}
 				className='h-full w-full'>
 				<TileLayer

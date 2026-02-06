@@ -19,7 +19,7 @@ const liveIcon = new L.Icon({
 })
 
 export default function FoliaMap({ blocks }: { blocks: any[] }) {
-	const center = { lat: -23.5505, lng: -46.6333 } // Centro de SP (conforme sua massa de dados)
+	const center = { lat: -23.5545312, lng: -46.6954868 } // Vila Madalena (conforme sua massa de dados)
 
 	return (
 		<div className='h-[400px] w-full rounded-3xl overflow-hidden shadow-inner border-4 border-white'>
